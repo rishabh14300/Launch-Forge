@@ -6,6 +6,10 @@
     "startCommand": "npm run start"
   },
   "nixpacks": {
-    "node": "20"
+    "node": "20",
+    "buildCommands": [
+      "npm install @rollup/rollup-linux-x64-gnu --save-dev",
+      "npm run build"
+    ]
   }
 }
