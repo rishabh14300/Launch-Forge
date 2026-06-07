@@ -1,0 +1,21 @@
+services:
+  - type: web
+    name: launchforge
+    env: node
+    region: oregon
+    plan: free
+    buildCommand: npm run build
+    startCommand: npm run start
+    envVars:
+      - key: NODE_ENV
+        value: production
+      - key: GEMINI_API_KEY
+        scope: pr,prod
+        sync: false
+      - key: MONGODB_URI
+        scope: pr,prod
+        sync: false
+      - key: MONGODB_DB_NAME
+        value: launchforge
+      - key: GEMINI_MODEL
+        value: gemini-3.5-flash
