@@ -6,6 +6,9 @@
     "startCommand": "npm run start"
   },
   "nixpacks": {
-    "node": "20"
+    "node": "20",
+    "buildCommands": [
+      "npm ci --legacy-peer-deps"
+    ]
   }
 }
