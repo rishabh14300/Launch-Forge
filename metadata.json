@@ -1,0 +1,6 @@
+{
+  "name": "LaunchForge AI",
+  "description": "AI-powered SaaS tool for generating complete startup architecture blueprints, product strategies, database schemas, and API structures in seconds.",
+  "requestFramePermissions": [],
+  "majorCapabilities": ["MAJOR_CAPABILITY_SERVER_SIDE_GEMINI_API"]
+}

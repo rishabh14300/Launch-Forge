@@ -1,0 +1,94 @@
+@import url('https://fonts.googleapis.com/css2?family=Plus+Jakarta+Sans:wght@300;400;500;600;700;800&family=Georgia:ital,wght@0,400;0,700;1,400;1,700&family=JetBrains+Mono:wght@400;500;700&display=swap');
+@import "tailwindcss";
+
+@theme {
+  --font-sans: "Plus Jakarta Sans", "Helvetica Neue", Helvetica, Arial, sans-serif;
+  --font-serif: "Georgia", serif;
+  --font-mono: "JetBrains Mono", monospace;
+
+  --color-art-bg: #F0EFE9;
+  --color-art-ink: #111111;
+  --color-art-accent: #FF3D00;
+  --color-art-paper: #FFFFFF;
+}
+
+body {
+  background-color: var(--color-art-bg);
+  color: var(--color-art-ink);
+  font-family: var(--font-sans);
+}
+
+/* Custom styles for brutalist aesthetic scrollbars */
+::-webkit-scrollbar {
+  width: 6px;
+  height: 6px;
+}
+::-webkit-scrollbar-track {
+  background: #F0EFE9;
+  border-left: 1px solid #111111;
+}
+::-webkit-scrollbar-thumb {
+  background: #111111;
+}
+::-webkit-scrollbar-thumb:hover {
+  background: #FF3D00;
+}
+
+/* Custom brutalist card design utility */
+.brutalist-card {
+  background: #FFFFFF;
+  border: 1px solid #111111;
+  box-shadow: 4px 4px 0px 0px #111111;
+  transition: transform 0.15s ease, box-shadow 0.15s ease;
+}
+.brutalist-card:hover {
+  transform: translate(-2px, -2px);
+  box-shadow: 6px 6px 0px 0px #111111;
+}
+
+/* Button style */
+.brutalist-btn {
+  background: #FFFFFF;
+  color: #111111;
+  border: 1px solid #111111;
+  box-shadow: 3px 3px 0px 0px #111111;
+  text-transform: uppercase;
+  font-weight: 700;
+  font-size: 12px;
+  letter-spacing: 0.1em;
+  padding: 12px 20px;
+  cursor: pointer;
+  transition: all 0.1s ease;
+}
+.brutalist-btn:hover:not(:disabled) {
+  background: #FF3D00;
+  color: #FFFFFF;
+  transform: translate(-1px, -1px);
+  box-shadow: 4px 4px 0px 0px #111111;
+}
+.brutalist-btn:active:not(:disabled) {
+  transform: translate(2px, 2px);
+  box-shadow: 0px 0px 0px 0px #111111;
+}
+
+/* Custom vertical text style */
+.vertical-text {
+  writing-mode: vertical-rl;
+  transform: rotate(180deg);
+  text-transform: uppercase;
+  font-size: 10px;
+  letter-spacing: 0.2em;
+  font-weight: 700;
+}
+
+/* Marquee slide animation */
+@keyframes marquee {
+  0% { transform: translateX(0%); }
+  100% { transform: translateX(-50%); }
+}
+
+.animate-marquee {
+  display: inline-flex;
+  white-space: nowrap;
+  animation: marquee 25s linear infinite;
+}
